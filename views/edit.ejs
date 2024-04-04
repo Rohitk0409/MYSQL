@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Database</title>
+    <style>
+        div{
+            
+            border: 2px solid black;
+            background-color: pink;
+            text-align: center;
+
+        }
+        button{
+            background-color: black;
+            color: white;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1> Edit your username</h1>
+        <!-- <h2>userid: <%= %></h2> -->
+    <form method="post" action="/user/<%=data.id%>?_method=PATCH">
+        <textarea name="username" id="username" placeholder="enter username" ><%=data.username %></textarea>
+        <input type="password" name="password" placeholder="Enter the password">
+        <br>
+        <br>
+        <button>save Username</button>
+        <br>
+        <br>
+    </form>
+        
+
+</div>
+
+</body>
+</html>
